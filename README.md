@@ -8,6 +8,8 @@
 > 的 `4k/` 目录，本插件内置的那 5 张就是从那里取的 4K 原图（中文语义命名 + 同名 `.txt` 叙事）。
 > 想换图 / 提新图 → 去素材仓库，不用动这里的代码。
 
+![奶蛙壁纸 · 新标签页预览](preview/newtab-1280x800.png)
+
 ## 功能
 
 - **壁纸来源**（设置面板里切换）
@@ -27,10 +29,10 @@
 
 ## 安装（Chrome / Edge，无需打包，开发者模式加载）
 
-1. 下载或解压本目录（`wallpaper-extension`）
+1. 下载本仓库（Code → Download ZIP）或 `git clone`，解压后得到 `naiwa-wallpaper` 目录；也可直接下载 [Releases](https://github.com/Nailong-Studio/naiwa-wallpaper/releases) 中的 `naiwa-wallpaper-v1.5.0.zip`
 2. 打开浏览器，地址栏输入 `chrome://extensions`（Edge 是 `edge://extensions`）
 3. 打开右上角（Edge 是左侧栏）的 **「开发者模式」** 开关
-4. 点击 **「加载已解压的扩展程序」**，选择本文件夹
+4. 点击 **「加载已解压的扩展程序」**，选择解压后的 `naiwa-wallpaper` 文件夹（仓库根目录即扩展本体）
 5. 浏览器可能提示"更改新标签页"，确认保留即可
 6. 新开一个标签页，就能看到奶蛙壁纸了 🐸
 
