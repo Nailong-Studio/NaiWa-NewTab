@@ -11,3 +11,5 @@ Thumbs.db
 *.zip
 /dist/
 /build/
+# 预览页（由 scripts/build_site.py 生成）
+/index.html
