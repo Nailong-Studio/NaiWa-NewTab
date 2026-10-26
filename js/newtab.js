@@ -2,7 +2,7 @@
 
 const $ = s => document.querySelector(s);
 
-const DEFAULT_SETTINGS = { source: 'naiwa', customUrl: '', autoSwitch: 0, engine: 'baidu' };
+const DEFAULT_SETTINGS = { source: 'naiwa', naiwaCat: 'all', customUrl: '', autoSwitch: 0, engine: 'baidu' };
 const ENGINES = {
   baidu: 'https://www.baidu.com/s?wd=',
   bing: 'https://www.bing.com/search?q=',
@@ -26,6 +26,8 @@ async function init() {
 
   renderClock();
   setInterval(renderClock, 1000);
+  const verEl = document.getElementById('ver');
+  try { if (verEl && chrome.runtime && chrome.runtime.getManifest) verEl.textContent = chrome.runtime.getManifest().version; } catch (e) {}
   bindEvents();
   renderSettingsUI();
   renderFavGrid();
@@ -165,19 +167,24 @@ async function refreshInner(force = false) {
       return reapply();
     }
     const urlOf = it => absUrl(it.file);
-    const pool = naiwaCache.filter(it => !current || current.url !== urlOf(it));
-    const chosen = pool[Math.floor(Math.random() * pool.length)] || naiwaCache[0];
+    const cat = settings.naiwaCat || 'all';
+    let catPool = cat === 'all' ? naiwaCache : naiwaCache.filter(it => it.category === cat);
+    if (!catPool.length) catPool = naiwaCache;
+    const pool = catPool.filter(it => !current || current.url !== urlOf(it));
+    const chosen = pool[Math.floor(Math.random() * pool.length)] || catPool[0];
+    const catLabel = chosen.category === '4k' ? '4K 大图' : (chosen.category === 'hd' ? '高清壁纸' : '全部素材');
     current = {
       source: 'naiwa',
       url: urlOf(chosen),
       thumb: absUrl(chosen.thumb),
       title: chosen.title,
-      copyright: '奶蛙主题 · 本地 4K',
+      copyright: '奶蛙素材 · 本地 ' + catLabel,
+      category: chosen.category,
       updatedAt: Date.now()
     };
     saveAndApply();
     // 预热另一张，换一张时即刻显示
-    const other = naiwaCache.find(it => urlOf(it) !== current.url);
+    const other = catPool.find(it => urlOf(it) !== current.url);
     if (other) { const img = new Image(); img.src = urlOf(other); }
     return;
   }
@@ -364,20 +371,22 @@ function closePanel() { $('#panel').classList.remove('open'); }
 function renderSettingsUI() {
   document.querySelectorAll('input[name="source"]').forEach(r => { r.checked = r.value === settings.source; });
   $('#custom-url').value = settings.customUrl;
-  updateCustomExtra();
+  $('#naiwa-cat').value = settings.naiwaCat || 'all';
+  updateSourceExtra();
   $('#auto-switch').value = String(settings.autoSwitch);
   $('#engine').value = settings.engine;
 }
 
-function updateCustomExtra() {
+function updateSourceExtra() {
   $('#custom-extra').classList.toggle('open', settings.source === 'custom');
+  $('#naiwa-extra').classList.toggle('open', settings.source === 'naiwa');
 }
 
 function bindSettingsEvents() {
   document.querySelectorAll('input[name="source"]').forEach(r => {
     r.addEventListener('change', async () => {
       settings.source = r.value;
-      updateCustomExtra();
+      updateSourceExtra();
       await saveSettings();
       refresh(true);
     });
@@ -387,6 +396,13 @@ function bindSettingsEvents() {
     settings.customUrl = $('#custom-url').value.trim();
     await saveSettings();
     if (settings.source === 'custom') refresh(true);
+  });
+
+  $('#naiwa-cat').addEventListener('change', async () => {
+    settings.naiwaCat = $('#naiwa-cat').value;
+    await saveSettings();
+    await refresh(true);
+    toast(settings.naiwaCat === 'all' ? '已切换为全部奶蛙素材' : '已切换奶蛙素材分类');
   });
 
   $('#auto-switch').addEventListener('change', async () => {
@@ -404,7 +420,7 @@ function bindSettingsEvents() {
       current = { source: 'local', url: reader.result, title: '本地图片', copyright: file.name, updatedAt: Date.now() };
       settings.source = 'local';
       document.querySelectorAll('input[name="source"]').forEach(r => { r.checked = false; });
-      updateCustomExtra();
+      updateSourceExtra();
       await saveSettings();
       saveAndApply();
       toast('已应用本地图片');

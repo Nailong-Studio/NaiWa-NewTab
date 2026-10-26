@@ -1,19 +1,22 @@
 # 🐸 奶蛙壁纸 · 浏览器新标签页插件
 
 把浏览器新标签页变成每日精选壁纸：大时钟、问候语、聚合搜索，一键收藏和下载壁纸。
-默认主题为本地内置的「奶蛙」4K 大图包，打开即显、离线可用。
+默认主题为本地内置的「奶蛙」27 张 4K / 高清大图包，打开即显、离线可用。
 
 > 本仓库是 **Nailong-Studio** 组织下的官方壁纸扩展。
 > 素材源统一在素材仓库 **[Nailong-Studio/wallpaper](https://github.com/Nailong-Studio/wallpaper)**
-> 的 `4k/` 目录，本插件内置的那 5 张就是从那里取的 4K 原图（中文语义命名 + 同名 `.txt` 叙事）。
+> 的 `4k/`（5 张）与 `hd/`（22 张）目录，插件内置的 27 张就是从这里取的（中文语义命名 + 同名 `.txt` 叙事）。
 > 想换图 / 提新图 → 去素材仓库，不用动这里的代码。
 
 ![奶蛙壁纸 · 新标签页预览](preview/newtab-1280x800.png)
 
+![奶蛙壁纸 · 分类与设置](preview/settings-1.6.0.png)
+
 ## 功能
 
 - **壁纸来源**（设置面板里切换）
-  - 奶蛙主题（默认）：本地内置 4K 奶蛙大图包，打开新标签页即刻显示、随机换图，不依赖网络
+  - 奶蛙主题（默认）：本地内置 27 张 4K / 高清奶蛙壁纸，打开新标签页即刻显示、随机换图，不依赖网络
+  - 奶蛙分类：全部 27 张 / 4K 大图 5 张 / 高清壁纸 22 张，可在设置面板切换
   - Bing 每日精选：自动获取最近 8 天 Bing 高清壁纸，每天自动换新
   - 随机美图：从 Picsum 图库随机换一张，带摄影师署名
   - 自定义图片链接 / 上传本地图片
@@ -29,7 +32,7 @@
 
 ## 安装（Chrome / Edge，无需打包，开发者模式加载）
 
-1. 下载本仓库（Code → Download ZIP）或 `git clone`，解压后得到 `naiwa-wallpaper` 目录；也可直接下载 [Releases](https://github.com/Nailong-Studio/naiwa-wallpaper/releases) 中的 `naiwa-wallpaper-v1.5.0.zip`
+1. 下载本仓库（Code → Download ZIP）或 `git clone`，解压后得到 `naiwa-wallpaper` 目录；也可直接下载 [Releases](https://github.com/Nailong-Studio/naiwa-wallpaper/releases) 中的 `naiwa-wallpaper-v1.6.0.zip`
 2. 打开浏览器，地址栏输入 `chrome://extensions`（Edge 是 `edge://extensions`）
 3. 打开右上角（Edge 是左侧栏）的 **「开发者模式」** 开关
 4. 点击 **「加载已解压的扩展程序」**，选择解压后的 `naiwa-wallpaper` 文件夹（仓库根目录即扩展本体）
@@ -49,25 +52,24 @@
 │   ├── storage.js       # 存储适配层（chrome.storage / localStorage）
 │   ├── sources.js       # 壁纸数据源（奶蛙内置包 / Bing / Picsum / 离线渐变）
 │   └── newtab.js        # 主逻辑（调度、收藏、设置、交互）
-├── wallpapers/          # 奶蛙 4K 大图包 + thumbs/ 缩略图 + list.json
+├── wallpapers/          # 奶蛙 27 张 4K/高清图 + thumbs/ 缩略图 + list.json
 └── icons/               # 插件图标 16/48/128
 ```
 
-`wallpapers/` 里的文件名与素材仓库 `4k/` 一一对应，例如：
+`wallpapers/` 里的文件名与素材仓库一一对应：4K 5 张来自 `4k/`，高清 22 张来自 `hd/`。
 
-| 扩展内文件 | 素材仓库 | 标题 |
+| 分类 | 内置数量 | 素材仓库目录 |
 |---|---|---|
-| `奶蛙-4K-捶头大笑-01.jpg` | `4k/奶蛙-4K-捶头大笑-01.jpg` | 捶头大笑 |
-| `奶蛙-4K-抱头震惊-02.jpg` | `4k/奶蛙-4K-抱头震惊-02.jpg` | 抱头震惊 |
-| `奶蛙-4K-叉腰指点-03.jpg` | `4k/奶蛙-4K-叉腰指点-03.jpg` | 叉腰指点 |
-| `奶蛙-4K-托腮沉思-04.jpg` | `4k/奶蛙-4K-托腮沉思-04.jpg` | 托腮沉思 |
-| `奶蛙-4K-张臂平衡-05.jpg` | `4k/奶蛙-4K-张臂平衡-05.jpg` | 张臂平衡 |
+| 4K 大图 | 5 | `4k/`（`奶蛙-4K-捶头大笑-01.jpg` 等） |
+| 高清壁纸 | 22 | `hd/`（`奶蛙-高清-01.jpg` … `奶蛙-高清-22.jpg`） |
+
+扩展内 `wallpapers/list.json` 记录每张图的 `file` / `thumb` / `title` / `category`，换图只需同步素材仓库对应文件后重新生成清单。
 
 ## 数据与隐私
 
 - 壁纸缓存、收藏、设置全部保存在本地（`chrome.storage.local`），不上传任何数据
 - 网络请求仅访问 Bing 壁纸接口（`cn.bing.com`）与 Picsum 图库（`picsum.photos`）
-- 奶蛙主题的图随扩展打包，本地读取，不发任何请求
+- 27 张奶蛙主题图随扩展打包，本地读取，不发任何请求
 
 ## 相关仓库
 

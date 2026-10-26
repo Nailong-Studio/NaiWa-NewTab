@@ -1,32 +1,191 @@
 [
   {
-    "file": "wallpapers/奶蛙-4K-捶头大笑-01.jpg",
-    "thumb": "wallpapers/thumbs/奶蛙-4K-捶头大笑-01.jpg",
-    "title": "捶头大笑",
-    "source": "Nailong-Studio/wallpaper · 4k/"
+    "file": "wallpapers/奶蛙-高清-01.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-01.webp",
+    "title": "高清 01",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
   },
   {
-    "file": "wallpapers/奶蛙-4K-抱头震惊-02.jpg",
-    "thumb": "wallpapers/thumbs/奶蛙-4K-抱头震惊-02.jpg",
-    "title": "抱头震惊",
-    "source": "Nailong-Studio/wallpaper · 4k/"
+    "file": "wallpapers/奶蛙-高清-02.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-02.webp",
+    "title": "高清 02",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-03.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-03.webp",
+    "title": "高清 03",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-04.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-04.webp",
+    "title": "高清 04",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-05.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-05.webp",
+    "title": "高清 05",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-06.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-06.webp",
+    "title": "高清 06",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-07.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-07.webp",
+    "title": "高清 07",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-08.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-08.webp",
+    "title": "高清 08",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-09.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-09.webp",
+    "title": "高清 09",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-10.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-10.webp",
+    "title": "高清 10",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-11.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-11.webp",
+    "title": "高清 11",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-12.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-12.webp",
+    "title": "高清 12",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-13.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-13.webp",
+    "title": "高清 13",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-14.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-14.webp",
+    "title": "高清 14",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-15.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-15.webp",
+    "title": "高清 15",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-16.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-16.webp",
+    "title": "高清 16",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-17.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-17.webp",
+    "title": "高清 17",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-18.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-18.webp",
+    "title": "高清 18",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-19.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-19.webp",
+    "title": "高清 19",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-20.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-20.webp",
+    "title": "高清 20",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-21.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-21.webp",
+    "title": "高清 21",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
+  },
+  {
+    "file": "wallpapers/奶蛙-高清-22.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-高清-22.webp",
+    "title": "高清 22",
+    "category": "hd",
+    "source": "Nailong-Studio/wallpaper · hd/"
   },
   {
     "file": "wallpapers/奶蛙-4K-叉腰指点-03.jpg",
-    "thumb": "wallpapers/thumbs/奶蛙-4K-叉腰指点-03.jpg",
-    "title": "叉腰指点",
-    "source": "Nailong-Studio/wallpaper · 4k/"
-  },
-  {
-    "file": "wallpapers/奶蛙-4K-托腮沉思-04.jpg",
-    "thumb": "wallpapers/thumbs/奶蛙-4K-托腮沉思-04.jpg",
-    "title": "托腮沉思",
+    "thumb": "wallpapers/thumbs/奶蛙-4K-叉腰指点-03.webp",
+    "title": "叉腰指点 03",
+    "category": "4k",
     "source": "Nailong-Studio/wallpaper · 4k/"
   },
   {
     "file": "wallpapers/奶蛙-4K-张臂平衡-05.jpg",
-    "thumb": "wallpapers/thumbs/奶蛙-4K-张臂平衡-05.jpg",
-    "title": "张臂平衡",
+    "thumb": "wallpapers/thumbs/奶蛙-4K-张臂平衡-05.webp",
+    "title": "张臂平衡 05",
+    "category": "4k",
+    "source": "Nailong-Studio/wallpaper · 4k/"
+  },
+  {
+    "file": "wallpapers/奶蛙-4K-托腮沉思-04.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-4K-托腮沉思-04.webp",
+    "title": "托腮沉思 04",
+    "category": "4k",
+    "source": "Nailong-Studio/wallpaper · 4k/"
+  },
+  {
+    "file": "wallpapers/奶蛙-4K-抱头震惊-02.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-4K-抱头震惊-02.webp",
+    "title": "抱头震惊 02",
+    "category": "4k",
+    "source": "Nailong-Studio/wallpaper · 4k/"
+  },
+  {
+    "file": "wallpapers/奶蛙-4K-捶头大笑-01.jpg",
+    "thumb": "wallpapers/thumbs/奶蛙-4K-捶头大笑-01.webp",
+    "title": "捶头大笑 01",
+    "category": "4k",
     "source": "Nailong-Studio/wallpaper · 4k/"
   }
 ]
