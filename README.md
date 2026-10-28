@@ -77,7 +77,7 @@
 | 仓库 | 内容 |
 |---|---|
 | [Nailong-Studio/wallpaper](https://github.com/Nailong-Studio/wallpaper) | 官方素材库房：全部奶蛙馆藏与 4K 大图 |
-| [Nailong-Studio/NaiLong-Universe](https://github.com/Nailong-Studio/NaiLong-Universe) | 奶蛙艺术圣殿 · 沉浸式线上艺术馆 |
+| [Nailong-Studio/NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe) | 奶蛙艺术圣殿 · 沉浸式线上艺术馆 |
 
 ## 六、已知说明
 
