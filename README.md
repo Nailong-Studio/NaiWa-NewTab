@@ -18,8 +18,8 @@
 ## 一、功能编制
 
 - **壁纸来源**（设置面板内切换）
-  - 奶蛙主题（默认）：内置 4K / 高清奶蛙壁纸，开屏即显、随机换图，不依赖网络
-  - 奶蛙分类：全部 / 4K 大图 / 高清壁纸，三档可选，按需供奉
+  - 奶蛙主题（默认）：内置 211 张奶蛙壁纸（桌面横屏 73 / 手机竖屏 74 / 方形大图 35 / 4K 巨幕 5 / 姿势壁纸 24），开屏即显、随机换图，不依赖网络
+  - 奶蛙分类：全部 / 桌面横屏 / 手机竖屏 / 方形大图 / 4K 巨幕 / 姿势壁纸，按需供奉
   - Bing 每日精选：自动获取最近数日的 Bing 高清壁纸，每天自动换新
   - 随机美图：从 Picsum 图库随机抽取，附带摄影师署名，不侵犯他人署名权
   - 自定义图片链接 / 上传本地图片
@@ -35,7 +35,7 @@
 
 ## 二、安装（Chrome / Edge，无需打包）
 
-1. 下载本仓库（Code → Download ZIP）或 `git clone`，解压得到 `naiwa-wallpaper` 目录；也可直接下载 [Releases](https://github.com/Nailong-Studio/naiwa-wallpaper/releases) 中的安装包
+1. 直接下载安装包 **[naiwa-wallpaper-v1.7.0.zip](https://github.com/Nailong-Studio/naiwa-wallpaper/releases/latest)**（或在 [在线预览页](https://naiwa-wallpaper.pages.dev/) 右下角点「下载扩展」），解压到任意目录；压缩包根目录就是 `manifest.json`，解压后直接选该目录即可
 2. 打开浏览器，地址栏输入 `chrome://extensions`（Edge 为 `edge://extensions`）
 3. 打开右上角（Edge 为左侧栏）的 **「开发者模式」** 开关
 4. 点击 **「加载已解压的扩展程序」**，选择解压后的 `naiwa-wallpaper` 文件夹（仓库根目录即扩展本体）
@@ -57,13 +57,15 @@
 │   ├── storage.js       # 存储适配层（chrome.storage / localStorage）
 │   ├── sources.js       # 壁纸数据源（奶蛙内置包 / Bing / Picsum / 离线渐变）
 │   └── newtab.js        # 主逻辑（调度、收藏、设置、交互）
-├── wallpapers/          # 奶蛙 4K/高清图 + thumbs/ 缩略图 + list.json
+├── wallpapers/          # 211 张奶蛙壁纸 + thumbs/ 缩略图 + list.json
 └── icons/               # 插件图标 16/48/128
 ```
 
-`wallpapers/` 中的文件名与素材仓库一一对应：4K 来自 `4k/`，高清来自 `hd/`。
+`wallpapers/` 中的文件来自素材仓库 [wallpaper](https://github.com/Nailong-Studio/wallpaper)：`classic/`、`hd/`、`4k/`、`art/`、`frames/`、`emotes/`、`laugh-gallery/`、`mobile/`、`poses-wall/`。
 
-`wallpapers/list.json` 记录每张图的 `file` / `thumb` / `title` / `category`。换图只需同步素材仓库对应文件，再重新生成清单。插件不自行生产素材，只负责陈列。
+`wallpapers/list.json` 记录每张图的 `file` / `thumb` / `title` / `category` / 尺寸。换图只需同步素材仓库对应文件，再重新生成清单。插件不自行生产素材，只负责陈列。
+
+`category` 取值：`desktop`（横屏 ≥1.5:1）、`vertical`（竖屏 ≤0.72:1）、`square`（近方形）、`4k`、`poses`（3D 立绘合成的竖屏壁纸）。
 
 ## 四、数据与隐私
 
