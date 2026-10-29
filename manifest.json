@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "奶蛙壁纸",
-  "version": "1.6.1",
-  "description": "把新标签页变成奶蛙每日精选壁纸：支持 Bing、随机美图、收藏与下载，离线可用，不收集数据。",
+  "version": "1.7.0",
+  "description": "把新标签页变成奶蛙每日精选壁纸：内置 211 张横屏/竖屏/方形/4K/姿势壁纸，另有 Bing、随机美图、收藏与下载，离线可用，不收集数据。",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

@@ -172,7 +172,8 @@ async function refreshInner(force = false) {
     if (!catPool.length) catPool = naiwaCache;
     const pool = catPool.filter(it => !current || current.url !== urlOf(it));
     const chosen = pool[Math.floor(Math.random() * pool.length)] || catPool[0];
-    const catLabel = chosen.category === '4k' ? '4K 大图' : (chosen.category === 'hd' ? '高清壁纸' : '全部素材');
+    const CAT_LABELS = { desktop: '桌面横屏', vertical: '手机竖屏', square: '方形大图', '4k': '4K 巨幕', poses: '姿势壁纸' };
+    const catLabel = CAT_LABELS[chosen.category] || '全部素材';
     current = {
       source: 'naiwa',
       url: urlOf(chosen),
