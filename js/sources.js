@@ -60,7 +60,7 @@ async function fetchPicsumList() {
 }
 
 // 奶蛙主题：清单随扩展打包，无网络依赖，打开即显
-// 素材源在 Nailong-Studio/wallpaper 的 4k/ 目录（中文语义命名 + 同名叙事）
+// 素材源在 Nailong-Studio/NaiWa-Wallpaper 的 4k/ 目录（中文语义命名 + 同名叙事）
 async function fetchNaiwaList() {
   try {
     const res = await fetchWithTimeout('wallpapers/list.json', 4000);
