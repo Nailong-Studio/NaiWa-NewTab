@@ -195,7 +195,7 @@ body {
   animation: rise .9s .55s ease both;
 }
 
-.credit { display: flex; flex-direction: column; gap: 5px; max-width: 62vw; }
+.credit { display: flex; flex: 1 1 auto; min-width: 0; flex-direction: column; gap: 5px; max-width: 62vw; }
 .brand { font-size: 13px; font-weight: 600; letter-spacing: .08em; opacity: .85; }
 .credit-text { font-size: 12px; opacity: .75; text-shadow: 0 1px 8px rgba(0,0,0,.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
