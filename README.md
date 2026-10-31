@@ -18,7 +18,7 @@
 ## 一、功能编制
 
 - **壁纸来源**（设置面板内切换）
-  - 奶蛙主题（默认）：内置 211 张奶蛙壁纸（桌面横屏 73 / 手机竖屏 74 / 方形大图 35 / 4K 巨幕 5 / 姿势壁纸 24），开屏即显、随机换图，不依赖网络
+  - 奶蛙主题（默认）：内置 212 张奶蛙壁纸（桌面横屏 73 / 手机竖屏 75 / 方形大图 35 / 4K 巨幕 5 / 姿势壁纸 24），开屏即显、随机换图，不依赖网络
   - 奶蛙分类：全部 / 桌面横屏 / 手机竖屏 / 方形大图 / 4K 巨幕 / 姿势壁纸，按需供奉
   - Bing 每日精选：自动获取最近数日的 Bing 高清壁纸，每天自动换新
   - 随机美图：从 Picsum 图库随机抽取，附带摄影师署名，不侵犯他人署名权
@@ -35,10 +35,10 @@
 
 ## 二、安装（Chrome / Edge，无需打包）
 
-1. 直接下载安装包 **[naiwa-wallpaper-v1.7.0.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**（或在 [在线预览页](https://naiwa-wallpaper.pages.dev/) 右下角点「下载扩展」），解压到任意目录；压缩包根目录就是 `manifest.json`，解压后直接选该目录即可
+1. 直接下载安装包 **[naiwa-wallpaper-v1.7.1.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**（或在 [在线预览页](https://naiwa-wallpaper.pages.dev/) 右下角点「下载扩展」），解压到任意目录；压缩包根目录就是 `manifest.json`，解压后直接选该目录即可
 2. 打开浏览器，地址栏输入 `chrome://extensions`（Edge 为 `edge://extensions`）
 3. 打开右上角（Edge 为左侧栏）的 **「开发者模式」** 开关
-4. 点击 **「加载已解压的扩展程序」**，选择解压后的 `naiwa-wallpaper` 文件夹（仓库根目录即扩展本体）
+4. 点击 **「加载已解压的扩展程序」**，选择解压后的扩展目录（仓库根目录即扩展本体）
 5. 浏览器可能提示「更改新标签页」，确认保留
 6. 新开一个标签页，验收奶蛙 🐸
 
@@ -59,7 +59,7 @@
 │   ├── storage.js       # 存储适配层（chrome.storage / localStorage）
 │   ├── sources.js       # 壁纸数据源（奶蛙内置包 / Bing / Picsum / 离线渐变）
 │   └── newtab.js        # 主逻辑（调度、收藏、设置、交互）
-├── wallpapers/          # 211 张奶蛙壁纸 + thumbs/ 缩略图 + list.json
+├── wallpapers/          # 212 张奶蛙壁纸 + thumbs/ 缩略图 + list.json
 └── icons/               # 插件图标 16/48/128
 ```
 
