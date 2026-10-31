@@ -18,7 +18,7 @@ manifest = json.loads((ROOT / 'manifest.json').read_text(encoding='utf-8'))
 version = manifest['version']
 
 BANNER = """
-<a href="dist/naiwa-wallpaper-v%s.zip" download style="position:fixed;right:16px;bottom:16px;z-index:99;
+<a href="dist/naiwa-wallpaper-v%s.zip" download style="position:fixed;right:16px;bottom:74px;z-index:99;
 display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;text-decoration:none;
 font:500 13px/1.4 'Noto Sans SC',sans-serif;color:#12100c;background:linear-gradient(165deg,#FFD54F,#D9B45B);
 box-shadow:0 8px 24px rgba(0,0,0,.45)">⤓ 下载扩展 v%s · 离线安装</a>
