@@ -19,7 +19,7 @@ def require(condition, message):
     if not condition:
         errors.append(message)
 
-require(MANIFEST.get('version') == '1.7.1', 'manifest version must be 1.7.1')
+require(MANIFEST.get('version') == '1.7.2', 'manifest version must be 1.7.2')
 require(len(ITEMS) == 212, 'wallpaper list must contain 212 items')
 require('bottom:74px' in BUILD, 'preview download banner must stay above the action bar')
 require('class="motion-decor"' in HTML, 'motion decoration layer is missing')
@@ -40,7 +40,7 @@ if zip_paths:
         require('wallpapers/list.json' in names, 'wallpaper list must be packaged')
         if 'manifest.json' in names:
             packaged_manifest = json.loads(package.read('manifest.json'))
-            require(packaged_manifest.get('version') == '1.7.1', 'packaged manifest version must be 1.7.1')
+            require(packaged_manifest.get('version') == MANIFEST.get('version'), 'packaged manifest version must match source')
         if 'wallpapers/list.json' in names:
             packaged_items = json.loads(package.read('wallpapers/list.json'))
             require(len(packaged_items) == 212, 'packaged wallpaper list must contain 212 items')

@@ -7,7 +7,7 @@
 
 把浏览器新标签页改造成每日壁纸：大时钟、问候语、聚合搜索，一键收藏与下载。默认主题为内置的「奶蛙」图包，打开即显、离线可用——网络断了，快乐不断供。
 
-> 本仓库是 **Nailong-Studio** 组织下的官方壁纸扩展。
+> 本仓库是 **NaiLoong Studio**（GitHub 组织 `Nailong-Studio`）的壁纸扩展。
 > 素材统一由素材仓库 **[Nailong-Studio/NaiWa-Wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper)** 供货（`4k/` 与 `hd/`），
 > 中文语义命名 + 同名 `.txt` 档案。想换图或提新图，去库房办手续，不要在这里私自动工。
 
@@ -35,7 +35,7 @@
 
 ## 二、安装（Chrome / Edge，无需打包）
 
-1. 直接下载安装包 **[naiwa-wallpaper-v1.7.1.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**（或在 [在线预览页](https://naiwa-wallpaper.pages.dev/) 右下角点「下载扩展」），解压到任意目录；压缩包根目录就是 `manifest.json`，解压后直接选该目录即可
+1. 直接下载安装包 **[naiwa-wallpaper-v1.7.2.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**（或在 [在线预览页](https://naiwa-wallpaper.pages.dev/) 右下角点「下载扩展」），解压到任意目录；压缩包根目录就是 `manifest.json`，解压后直接选该目录即可
 2. 打开浏览器，地址栏输入 `chrome://extensions`（Edge 为 `edge://extensions`）
 3. 打开右上角（Edge 为左侧栏）的 **「开发者模式」** 开关
 4. 点击 **「加载已解压的扩展程序」**，选择解压后的扩展目录（仓库根目录即扩展本体）
@@ -63,7 +63,7 @@
 └── icons/               # 插件图标 16/48/128
 ```
 
-`wallpapers/` 中的文件来自素材仓库 [wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper)：`classic/`、`hd/`、`4k/`、`art/`、`frames/`、`emotes/`、`laugh-gallery/`、`mobile/`、`poses-wall/`。
+`wallpapers/` 中的文件来自素材仓库 [NaiWa-Wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper)：`classic/`、`hd/`、`4k/`、`art/`、`frames/`、`emotes/`、`laugh-gallery/`、`mobile/`、`poses-wall/`。
 
 `wallpapers/list.json` 记录每张图的 `file` / `thumb` / `title` / `category` / 尺寸。换图只需同步素材仓库对应文件，再重新生成清单。插件不自行生产素材，只负责陈列。
 
