@@ -9,6 +9,29 @@
 <body>
   <div id="bg-a" class="bg"></div>
   <div id="bg-b" class="bg"></div>
+  <svg class="motion-decor" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="motion-orbit-stroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9df0d2" stop-opacity=".04"></stop><stop offset=".5" stop-color="#c6fff1" stop-opacity=".62"></stop><stop offset="1" stop-color="#9ddcff" stop-opacity=".04"></stop></linearGradient>
+      <radialGradient id="motion-orb-glow"><stop offset="0" stop-color="#e2fff6" stop-opacity=".78"></stop><stop offset=".35" stop-color="#9df0d2" stop-opacity=".34"></stop><stop offset="1" stop-color="#9df0d2" stop-opacity="0"></stop></radialGradient>
+      <filter id="motion-soft-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8"></feGaussianBlur></filter>
+    </defs>
+    <g class="motion-grid" opacity=".72">
+      <path d="M-80 586 C220 410 475 402 716 526 S1153 726 1370 470"></path>
+      <path d="M-80 160 C210 304 443 326 677 218 S1122 -12 1370 204"></path>
+      <ellipse cx="641" cy="355" rx="535" ry="250" transform="rotate(-13 641 355)"></ellipse>
+      <ellipse cx="642" cy="356" rx="430" ry="187" transform="rotate(17 642 356)"></ellipse>
+    </g>
+    <g transform="translate(641 356)">
+      <ellipse class="motion-orbit" rx="430" ry="187" transform="rotate(-18)"></ellipse>
+      <ellipse class="motion-orbit motion-orbit--second" rx="360" ry="155" transform="rotate(38)"></ellipse>
+      <circle class="motion-glow" cx="318" cy="-92" r="30"></circle>
+      <circle class="motion-glow motion-glow--second" cx="-270" cy="122" r="23"></circle>
+    </g>
+    <path class="motion-haze" d="M-30 446 C264 238 456 214 652 348 S1088 548 1310 270"></path>
+    <g>
+      <circle class="motion-particle" cx="122" cy="184" r="2.8"></circle><circle class="motion-particle motion-particle--alt" cx="238" cy="532" r="2.1"></circle><circle class="motion-particle" cx="338" cy="122" r="1.8"></circle><circle class="motion-particle motion-particle--alt" cx="446" cy="622" r="2.5"></circle><circle class="motion-particle" cx="812" cy="98" r="2.7"></circle><circle class="motion-particle motion-particle--alt" cx="946" cy="560" r="1.9"></circle><circle class="motion-particle" cx="1058" cy="172" r="2.2"></circle>
+    </g>
+  </svg>
   <div class="vignette"></div>
   <div class="scrim"></div>
 

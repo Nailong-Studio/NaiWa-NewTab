@@ -45,6 +45,30 @@ body {
 /* 渐变壁纸无「内容区」概念，直接铺满 */
 .bg.grad::after { background-size: cover; animation: none; }
 
+.motion-decor {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .72;
+  mix-blend-mode: screen;
+}
+.motion-grid path, .motion-grid ellipse { fill: none; stroke: rgba(179,239,235,.11); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.motion-grid path:nth-child(even), .motion-grid ellipse:nth-child(even) { stroke: rgba(157,220,255,.07); }
+.motion-orbit { fill: none; stroke: url(#motion-orbit-stroke); stroke-width: 1.5; vector-effect: non-scaling-stroke; transform-box: fill-box; transform-origin: center; animation: motion-orbit 30s linear infinite; }
+.motion-orbit--second { animation-duration: 42s; animation-direction: reverse; opacity: .55; }
+.motion-glow { fill: url(#motion-orb-glow); filter: url(#motion-soft-glow); opacity: .72; animation: motion-pulse 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.motion-glow--second { animation-delay: -2.2s; animation-duration: 9s; opacity: .48; }
+.motion-haze { fill: none; stroke: rgba(187,248,233,.13); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 2 16; vector-effect: non-scaling-stroke; animation: motion-dash 24s linear infinite; }
+.motion-particle { fill: #c2fff0; opacity: .58; transform-box: fill-box; transform-origin: center; animation: motion-drift 11s ease-in-out infinite; }
+.motion-particle--alt { fill: #b4ddff; opacity: .42; animation-duration: 14s; }
+@keyframes motion-orbit { to { transform: rotate(360deg); } }
+@keyframes motion-pulse { 0%, 100% { transform: scale(.88); opacity: .32; } 50% { transform: scale(1.16); opacity: .8; } }
+@keyframes motion-drift { 0%, 100% { transform: translate3d(0,0,0); opacity: .18; } 50% { transform: translate3d(9px,-14px,0); opacity: .78; } }
+@keyframes motion-dash { to { stroke-dashoffset: -360; } }
+
 @keyframes kenburns {
   from { transform: scale(1) translateY(0); }
   to   { transform: scale(1.055) translateY(-.8%); }
@@ -53,6 +77,7 @@ body {
 .vignette {
   position: fixed;
   inset: 0;
+  z-index: 3;
   pointer-events: none;
   background:
     linear-gradient(to bottom, rgba(0,0,0,.38) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 62%, rgba(0,0,0,.46) 100%),
@@ -63,6 +88,7 @@ body {
 .scrim {
   position: fixed;
   inset: 0;
+  z-index: 4;
   pointer-events: none;
   background: radial-gradient(58% 46% at 50% 44%, rgba(0,0,0,.30) 0%, rgba(0,0,0,.13) 48%, rgba(0,0,0,0) 74%);
 }
@@ -70,6 +96,7 @@ body {
 /* ---------- 中央区：分层入场 ---------- */
 .center {
   position: fixed;
+  z-index: 5;
   inset: 0;
   display: flex;
   flex-direction: column;
@@ -185,6 +212,7 @@ body {
 /* ---------- 底栏 ---------- */
 .meta {
   position: fixed;
+  z-index: 6;
   left: 0;
   right: 0;
   bottom: 0;
@@ -237,6 +265,7 @@ body {
 /* ---------- 设置面板 ---------- */
 .panel {
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   bottom: 0;
@@ -381,6 +410,7 @@ body {
 /* ---------- Toast ---------- */
 .toast {
   position: fixed;
+  z-index: 20;
   left: 50%;
   bottom: 96px;
   transform: translate(-50%, 16px);
@@ -416,4 +446,9 @@ body {
   .clock { font-size: clamp(48px, 15vh, 96px); }
   .center { gap: 10px; padding-bottom: 2vh; }
   .search { margin-top: 12px; height: 46px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-decor, .motion-decor * { animation: none !important; }
+  .motion-decor { opacity: .42; }
 }

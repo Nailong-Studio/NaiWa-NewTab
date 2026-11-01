@@ -17,8 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Build preview page and package
         run: python3 scripts/build_site.py
+      - name: Verify page contract and package integrity
+        run: python3 scripts/check_page_contract.py
       - name: Publish extension preview to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
