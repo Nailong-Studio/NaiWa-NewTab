@@ -54,6 +54,12 @@ require(bool(re.match(r"^\d+\.\d+\.\d+$", version)),
 # --- version agreement -------------------------------------------------------
 require(f"## v{version}" in changelog, f"CHANGELOG.md has no entry for v{version}")
 require('id="ver"' in html, "version placeholder missing from the page")
+# The preview has no chrome.runtime, so the shipped page must carry the real
+# version or it will display whatever was hard-coded when the file was written.
+built = ROOT / "index.html"
+if built.exists():
+    require(f'id="ver">{version}<' in read(built),
+            f"built preview page does not show v{version}: run scripts/build_site.py")
 
 # --- inventory ---------------------------------------------------------------
 require(len(items) == EXPECTED_WALLPAPERS,

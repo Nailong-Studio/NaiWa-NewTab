@@ -8,6 +8,7 @@
 用法：python3 scripts/build_site.py
 """
 import json
+import re
 import zipfile
 from pathlib import Path
 
@@ -44,6 +45,11 @@ CONTROL_SCRIPT = '''
 
 BANNER = BANNER.replace('<a href="dist/', '<a id="ext-download" href="dist/')
 BANNER = BANNER.replace('z-index:99;', 'z-index:9;transition:opacity .25s ease;')
+# The page shows its version from chrome.runtime inside the extension. In the
+# preview there is no chrome.runtime, so the hard-coded fallback would show a
+# stale number forever; stamp the real version in at build time instead.
+newtab = re.sub(r'(<span id="ver">)[^<]*(</span>)', r'\g<1>' + version + r'\g<2>', newtab)
+
 (ROOT / 'index.html').write_text(
     newtab.replace('</body>', BANNER + CONTROL_SCRIPT + '</body>'), encoding='utf-8')
 
