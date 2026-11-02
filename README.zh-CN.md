@@ -37,7 +37,7 @@
 
 ## 二、安装（Chrome / Edge，无需打包）
 
-1. 直接下载安装包 **[naiwa-wallpaper-v1.7.2.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**（或在 [在线预览页](https://naiwa-wallpaper.pages.dev/) 右下角点「下载扩展」），解压到任意目录；压缩包根目录就是 `manifest.json`，解压后直接选该目录即可
+1. 直接下载安装包 **[naiwa-wallpaper-v1.7.3.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**（或在 [在线预览页](https://naiwa-wallpaper.pages.dev/) 右下角点「下载扩展」），解压到任意目录；压缩包根目录就是 `manifest.json`，解压后直接选该目录即可
 2. 打开浏览器，地址栏输入 `chrome://extensions`（Edge 为 `edge://extensions`）
 3. 打开右上角（Edge 为左侧栏）的 **「开发者模式」** 开关
 4. 点击 **「加载已解压的扩展程序」**，选择解压后的扩展目录（仓库根目录即扩展本体）

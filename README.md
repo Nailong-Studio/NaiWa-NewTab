@@ -6,7 +6,7 @@
 
 [![Stars](https://img.shields.io/github/stars/Nailong-Studio/NaiWa-NewTab?style=for-the-badge&label=Star&color=FFD700&logo=github)](https://github.com/Nailong-Studio/NaiWa-NewTab/stargazers)
 [![Live preview](https://img.shields.io/badge/live%20preview-naiwa--wallpaper.pages.dev-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://naiwa-wallpaper.pages.dev/)
-[![Download](https://img.shields.io/badge/download-v1.7.2-2ea44f?style=for-the-badge)](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)
+[![Download](https://img.shields.io/badge/download-v1.7.3-2ea44f?style=for-the-badge)](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)
 [![Manifest V3](https://img.shields.io/badge/manifest-v3-blue?style=for-the-badge)](manifest.json)
 
 [English](README.md) · [简体中文](README.zh-CN.md)
@@ -42,7 +42,7 @@ not count how many tabs you open. It is not interested.
 
 Chrome and Edge, no build step, no store listing:
 
-1. Download **[naiwa-wallpaper-v1.7.2.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**
+1. Download **[naiwa-wallpaper-v1.7.3.zip](https://github.com/Nailong-Studio/NaiWa-NewTab/releases/latest)**
    (or click *Download extension* on the [live preview](https://naiwa-wallpaper.pages.dev/)).
 2. Unzip it anywhere. The archive root **is** the extension — `manifest.json` sits
    at the top level.
