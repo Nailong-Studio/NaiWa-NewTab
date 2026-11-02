@@ -25,7 +25,27 @@ box-shadow:0 8px 24px rgba(0,0,0,.45)">⤓ 下载扩展 v%s · 离线安装</a>
 """ % (version, version)
 
 newtab = (ROOT / 'newtab.html').read_text(encoding='utf-8')
-(ROOT / 'index.html').write_text(newtab.replace('</body>', BANNER + '</body>'), encoding='utf-8')
+
+# The download banner is a preview-only affordance. It must not cover the
+# settings panel footer (shortcut hints, version), so it hides whenever the
+# panel is open and shifts out of the way on narrow screens.
+CONTROL_SCRIPT = '''
+<script>
+(function(){
+  var banner = document.getElementById('ext-download');
+  var panel = document.getElementById('panel');
+  if (!banner || !panel) return;
+  var sync = function(){ banner.style.opacity = panel.classList.contains('open') ? '0' : '1'; };
+  new MutationObserver(sync).observe(panel, {attributes:true, attributeFilter:['class']});
+  sync();
+})();
+</script>
+'''
+
+BANNER = BANNER.replace('<a href="dist/', '<a id="ext-download" href="dist/')
+BANNER = BANNER.replace('z-index:99;', 'z-index:9;transition:opacity .25s ease;')
+(ROOT / 'index.html').write_text(
+    newtab.replace('</body>', BANNER + CONTROL_SCRIPT + '</body>'), encoding='utf-8')
 
 DIST.mkdir(exist_ok=True)
 zip_path = DIST / ('naiwa-wallpaper-v%s.zip' % version)

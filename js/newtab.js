@@ -34,8 +34,13 @@ async function init() {
 
   if (current) {
     queueApply(() => applyCurrent(current, true)); // 先瞬间铺上缓存壁纸，再在后台刷新
+  } else if (settings.source === 'naiwa') {
+    // 内置壁纸随扩展打包，读本地清单即可，不必先闪一帧「离线渐变」再换图。
+    // 清单读不到时才退到渐变兜底。
+    naiwaCache = await fetchNaiwaList();
+    if (!naiwaCache.length) pickGradient();
   } else {
-    pickGradient(); // 首次打开先铺一层渐变，避免网络壁纸加载前一片空白
+    pickGradient(); // 网络壁纸加载前先铺一层渐变，避免一片空白
   }
   await refresh(false);
 }
