@@ -125,6 +125,10 @@ require("ext-download" in build_script,
         "preview banner needs an id so it can yield to the settings panel")
 require("z-index:9" in compact_build, "preview banner must stack below the settings panel")
 
+# --- reproducible package ----------------------------------------------------
+require("RELEASE_TIMESTAMP" in build_script,
+        "build_site.py must pin zip entry timestamps so the package is reproducible")
+
 # --- package -----------------------------------------------------------------
 zip_paths = sorted((ROOT / "dist").glob("naiwa-wallpaper-v*.zip"))
 require(len(zip_paths) == 1,

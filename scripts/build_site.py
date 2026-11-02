@@ -52,6 +52,10 @@ zip_path = DIST / ('naiwa-wallpaper-v%s.zip' % version)
 if zip_path.exists():
     zip_path.unlink()
 
+# Fixed timestamp for every entry: 1980-01-01, the earliest value the ZIP
+# format allows. Chosen so the archive hash depends only on content.
+RELEASE_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
+
 SKIP_DIRS = {'.git', 'scripts', 'dist', 'node_modules', '__pycache__'}
 SKIP_FILES = {'index.html', '.gitignore'}
 
@@ -65,7 +69,14 @@ with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
             continue
         if rel.name in SKIP_FILES or rel.name.endswith('.zip'):
             continue
-        z.write(p, rel.as_posix())
+        # Write through ZipInfo with a fixed timestamp so the package is
+        # byte-reproducible: the same tree must yield the same SHA-256, which is
+        # what a published release digest is for. Per-file mtimes would make
+        # every build differ for no reason.
+        info = zipfile.ZipInfo(rel.as_posix(), date_time=RELEASE_TIMESTAMP)
+        info.compress_type = zipfile.ZIP_DEFLATED
+        info.external_attr = 0o644 << 16
+        z.writestr(info, p.read_bytes(), compresslevel=9)
         count += 1
 
 with zipfile.ZipFile(zip_path) as z:
