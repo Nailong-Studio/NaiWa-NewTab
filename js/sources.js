@@ -61,11 +61,19 @@ async function fetchPicsumList() {
 
 // 奶蛙主题：清单随扩展打包，无网络依赖，打开即显
 // 素材源在 Nailong-Studio/NaiWa-Wallpaper 的 4k/ 目录（中文语义命名 + 同名叙事）
+//
+// 清单只有 59 KB 且与扩展同源，正常几十毫秒就回。它必须比网络图源宽松得多：
+// 4 秒的预算在冷启动 + 慢速 CDN 上会误判超时，导致首屏直接落进离线渐变兜底。
+// 这里给 12 秒，并缓存结果，避免每次刷新重复请求同一份静态清单。
+let naiwaListCache = null;
+
 async function fetchNaiwaList() {
+  if (naiwaListCache) return naiwaListCache;
   try {
-    const res = await fetchWithTimeout('wallpapers/list.json', 4000);
+    const res = await fetchWithTimeout('wallpapers/list.json', 12000);
     if (!res.ok) return [];
     const arr = await res.json();
+    if (Array.isArray(arr) && arr.length) naiwaListCache = arr;
     return Array.isArray(arr) ? arr : [];
   } catch (e) {
     return [];
