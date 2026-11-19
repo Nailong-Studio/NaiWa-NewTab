@@ -738,15 +738,6 @@
   "thumb": "wallpapers/thumbs/art-奶蛙-艺术-08.webp"
  },
  {
-  "file": "wallpapers/art-奶蛙-艺术-09.webp",
-  "title": "奶蛙-艺术-09",
-  "category": "vertical",
-  "w": 768,
-  "h": 1376,
-  "source": "Nailong-Studio/wallpaper · art/",
-  "thumb": "wallpapers/thumbs/art-奶蛙-艺术-09.webp"
- },
- {
   "file": "wallpapers/art-奶蛙-艺术-10.webp",
   "title": "奶蛙-艺术-10",
   "category": "vertical",
@@ -963,15 +954,6 @@
   "thumb": "wallpapers/thumbs/art-奶蛙-艺术-33.webp"
  },
  {
-  "file": "wallpapers/art-奶蛙-艺术-34.webp",
-  "title": "奶蛙-艺术-34",
-  "category": "vertical",
-  "w": 1536,
-  "h": 2752,
-  "source": "Nailong-Studio/wallpaper · art/",
-  "thumb": "wallpapers/thumbs/art-奶蛙-艺术-34.webp"
- },
- {
   "file": "wallpapers/art-奶蛙-艺术-35.webp",
   "title": "奶蛙-艺术-35",
   "category": "vertical",
@@ -1179,15 +1161,6 @@
   "thumb": "wallpapers/thumbs/frames-奶蛙-帧图-最伟大的奶蛙-28.5s.webp"
  },
  {
-  "file": "wallpapers/frames-奶蛙-帧图-最伟大的奶蛙-28s.webp",
-  "title": "奶蛙-帧图-最伟大的奶蛙-28s",
-  "category": "vertical",
-  "w": 1080,
-  "h": 1920,
-  "source": "Nailong-Studio/wallpaper · frames/",
-  "thumb": "wallpapers/thumbs/frames-奶蛙-帧图-最伟大的奶蛙-28s.webp"
- },
- {
   "file": "wallpapers/frames-奶蛙-帧图-最伟大的奶蛙-2s.webp",
   "title": "奶蛙-帧图-最伟大的奶蛙-2s",
   "category": "vertical",
@@ -1240,24 +1213,6 @@
   "h": 1920,
   "source": "Nailong-Studio/wallpaper · frames/",
   "thumb": "wallpapers/thumbs/frames-奶蛙-帧图-最伟大的奶蛙-7.5s.webp"
- },
- {
-  "file": "wallpapers/frames-奶蛙-帧图-最伟大的奶蛙-9.5s.webp",
-  "title": "奶蛙-帧图-最伟大的奶蛙-9.5s",
-  "category": "vertical",
-  "w": 1080,
-  "h": 1920,
-  "source": "Nailong-Studio/wallpaper · frames/",
-  "thumb": "wallpapers/thumbs/frames-奶蛙-帧图-最伟大的奶蛙-9.5s.webp"
- },
- {
-  "file": "wallpapers/frames-奶蛙-帧图-最伟大的奶蛙-9s.webp",
-  "title": "奶蛙-帧图-最伟大的奶蛙-9s",
-  "category": "vertical",
-  "w": 1080,
-  "h": 1920,
-  "source": "Nailong-Studio/wallpaper · frames/",
-  "thumb": "wallpapers/thumbs/frames-奶蛙-帧图-最伟大的奶蛙-9s.webp"
  },
  {
   "file": "wallpapers/laugh-gallery-奶蛙-仰头捧腹大笑.webp",
@@ -1897,14 +1852,5 @@
   "h": 1920,
   "source": "Nailong-Studio/wallpaper · poses-wall/",
   "thumb": "wallpapers/thumbs/poseswall-奶蛙-姿势壁纸-薯条.webp"
- },
- {
-  "file": "wallpapers/art-奶蛙-场景-静立.webp",
-  "title": "奶蛙-场景-静立",
-  "category": "vertical",
-  "w": 888,
-  "h": 1240,
-  "source": "Nailong-Studio/NaiWa-Wallpaper · art/",
-  "thumb": "wallpapers/thumbs/art-奶蛙-场景-静立.webp"
  }
 ]

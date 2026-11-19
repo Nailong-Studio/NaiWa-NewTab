@@ -2,7 +2,7 @@
 
 # NaiWa New Tab
 
-**Every new tab, a different frog. 212 wallpapers bundled, zero network required.**
+**Every new tab, a different frog. 206 wallpapers bundled, zero network required.**
 
 [![Stars](https://img.shields.io/github/stars/Nailong-Studio/NaiWa-NewTab?style=for-the-badge&label=Star&color=FFD700&logo=github)](https://github.com/Nailong-Studio/NaiWa-NewTab/stargazers)
 [![Live preview](https://img.shields.io/badge/live%20preview-naiwa--wallpaper.pages.dev-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://naiwa-wallpaper.pages.dev/)
@@ -21,7 +21,7 @@
 
 Replaces your browser's new tab page with a wallpaper viewer: a large clock, a
 greeting that knows what time it is, and a search box that talks to Baidu, Bing
-or Google. The default pack ships **212 NaiWa wallpapers inside the extension**,
+or Google. The default pack ships **206 NaiWa wallpapers inside the extension**,
 so it works instantly, offline, and with no account.
 
 It does not read page content, does not inject scripts into websites, and does
@@ -57,7 +57,7 @@ Chrome and Edge, no build step, no store listing:
 
 | Source | Network | Notes |
 | --- | --- | --- |
-| **NaiWa (default)** | none | 212 bundled wallpapers — 73 desktop, 75 vertical, 35 square, 5 4K, 24 pose |
+| **NaiWa (default)** | none | 206 bundled wallpapers — 73 desktop, 69 vertical, 35 square, 5 4K, 24 pose |
 | NaiWa by category | none | Filter the bundle to one of the five categories |
 | Bing daily | yes | Last 8 Bing picks, refreshed hourly |
 | Picsum random | yes | Random photography with photographer credit |
@@ -88,7 +88,7 @@ css/newtab.css         styles
 js/storage.js          storage adapter (chrome.storage / localStorage)
 js/sources.js          wallpaper sources (bundled / Bing / Picsum / gradient)
 js/newtab.js           main logic: scheduling, favourites, settings, interaction
-wallpapers/            212 wallpapers + thumbs/ + list.json
+wallpapers/            206 wallpapers + thumbs/ + list.json
 icons/                 16 / 48 / 128
 scripts/build_site.py  builds the preview page and the release ZIP
 scripts/check_page_contract.py  verifies page contract and package integrity

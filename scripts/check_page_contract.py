@@ -25,7 +25,7 @@ ROOT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).reso
 # Declared inventory size. Kept in one place so growing the wallpaper pack is a
 # single edit; the checks below then enforce that list.json, the ZIP and the
 # files on disk all agree with it.
-EXPECTED_WALLPAPERS = 212
+EXPECTED_WALLPAPERS = 206
 
 problems: list[str] = []
 
