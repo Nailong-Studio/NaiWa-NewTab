@@ -2,6 +2,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+[![Stars](https://img.shields.io/github/stars/Nailong-Studio/NaiWa-NewTab?style=for-the-badge&label=Star&color=FFD700&logo=github)](https://github.com/Nailong-Studio/NaiWa-NewTab/stargazers)
+
 > **本扩展的唯一职责，是在你每次打开新标签页、准备逃避工作的那一秒，递上一只奶蛙。**
 >
 > 它不分析你的行为，不上传你的数据，不推荐理财产品。
@@ -89,6 +91,12 @@
 
 - 首次安装后 Bing 每日精选需联网拉取一次列表；失败会自动退到随机美图或渐变壁纸，不会让你对着空白页发呆。
 - 「上传本地图片」以 DataURL 形式存于本地存储；图片过大（>10MB）时加载会稍慢，属于正常的物理规律。
+
+## 给三个奶蛙项目点 Star
+
+如果这些奶蛙帮你省了找图的时间，去 GitHub 给三个项目各点一颗 Star：[素材仓库](https://github.com/Nailong-Studio/NaiWa-Wallpaper)、[新标签页扩展](https://github.com/Nailong-Studio/NaiWa-NewTab)、[艺术圣殿](https://github.com/Nailong-Studio/NaiLoong-Universe)。
+
+Star 是公开的收藏，不用打赏，也不用注册新账号。
 
 ## License
 

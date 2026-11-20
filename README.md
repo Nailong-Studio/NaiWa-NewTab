@@ -123,6 +123,12 @@ photography). The bundled NaiWa pack is read from disk and makes no request.
 | [NaiWa-Wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper) | The asset warehouse: every original, with per-file licence records |
 | [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe) | The museum these wallpapers hang in |
 
+## Star the frogs
+
+If these wallpapers save you a minute of scrolling, give the three NaiWa projects a star: [NaiWa-Wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper), [NaiWa-NewTab](https://github.com/Nailong-Studio/NaiWa-NewTab), and [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe).
+
+Stars are public bookmarks; no payment, no new account.
+
 ## Licence
 
 MIT. NaiWa is a fan-made derivative character; original character rights stay
