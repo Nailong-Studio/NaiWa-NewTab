@@ -125,7 +125,7 @@ photography). The bundled NaiWa pack is read from disk and makes no request.
 
 ## Star the frogs
 
-If these wallpapers save you a minute of scrolling, give the three NaiWa projects a star: [NaiWa-Wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper), [NaiWa-NewTab](https://github.com/Nailong-Studio/NaiWa-NewTab), and [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe).
+If the NaiWa family made you smile, give all five projects a star: [NaiWa-Wallpaper](https://github.com/Nailong-Studio/NaiWa-Wallpaper), [NaiWa-NewTab](https://github.com/Nailong-Studio/NaiWa-NewTab), [NaiLoong-Universe](https://github.com/Nailong-Studio/NaiLoong-Universe), [naiwa](https://github.com/Nailong-Studio/naiwa), and [naiwa-pixel-stickers](https://github.com/Nailong-Studio/naiwa-pixel-stickers).
 
 Stars are public bookmarks; no payment, no new account.
 

@@ -92,9 +92,9 @@
 - 首次安装后 Bing 每日精选需联网拉取一次列表；失败会自动退到随机美图或渐变壁纸，不会让你对着空白页发呆。
 - 「上传本地图片」以 DataURL 形式存于本地存储；图片过大（>10MB）时加载会稍慢，属于正常的物理规律。
 
-## 给三个奶蛙项目点 Star
+## 给五个奶蛙项目点 Star
 
-如果这些奶蛙帮你省了找图的时间，去 GitHub 给三个项目各点一颗 Star：[素材仓库](https://github.com/Nailong-Studio/NaiWa-Wallpaper)、[新标签页扩展](https://github.com/Nailong-Studio/NaiWa-NewTab)、[艺术圣殿](https://github.com/Nailong-Studio/NaiLoong-Universe)。
+如果奶蛙系列让你笑了一下，去 GitHub 给五个项目各点一颗 Star：[素材仓库](https://github.com/Nailong-Studio/NaiWa-Wallpaper)、[新标签页扩展](https://github.com/Nailong-Studio/NaiWa-NewTab)、[艺术圣殿](https://github.com/Nailong-Studio/NaiLoong-Universe)、[像素游戏](https://github.com/Nailong-Studio/naiwa)、[像素表情技能](https://github.com/Nailong-Studio/naiwa-pixel-stickers)。
 
 Star 是公开的收藏，不用打赏，也不用注册新账号。
 
